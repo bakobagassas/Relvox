@@ -78,4 +78,53 @@
                 hero.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
         });
+
+        // Get elements
+        const writeMessageBtn = document.getElementById('writeMessageBtn');
+        const contactForm = document.getElementById('contactForm');
+        const closeFormBtn = document.getElementById('closeFormBtn');
+
+        // Toggle form when "Write us a message" button is clicked
+        writeMessageBtn.addEventListener('click', function() {
+            if (contactForm.classList.contains('active')) {
+                // Hide form if it's currently visible
+                contactForm.classList.remove('active');
+                setTimeout(() => {
+                    contactForm.style.display = 'none';
+                }, 300);
+            } else {
+                // Show form if it's currently hidden
+                contactForm.style.display = 'block';
+                // Small delay to allow display change before adding active class for smooth animation
+                setTimeout(() => {
+                    contactForm.classList.add('active');
+                }, 10);
+                
+                // Scroll to form smoothly
+                contactForm.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }
+        });
+
+        // Optional: Hide form when clicking outside of it
+        document.addEventListener('click', function(event) {
+            if (contactForm.classList.contains('active') && 
+                !contactForm.contains(event.target) && 
+                !writeMessageBtn.contains(event.target)) {
+                closeFormBtn.click();
+            }
+        });
+
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent successfully! (This is a demo)');
+            // Here you would typically send the form data to your server
+            
+            // Reset form and hide it
+            this.reset();
+            closeFormBtn.click();
+        });
     
