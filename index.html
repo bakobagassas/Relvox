@@ -14,9 +14,9 @@
             </div>
             <div class="nav-center">
                 <ul class="nav-links">
-                    <li><a href="#home" data-en="Home" data-fr="Accueil">Home</a></li>
-                    <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
-                    <li><a href="#programs" data-en="Programs" data-fr="Programmes">Programs</a></li>
+                    <li><a href="./index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+                    <li><a href="./about.html" data-en="About" data-fr="À propos">About</a></li>
+                    <li><a href="./programs.html" data-en="Programs" data-fr="Programmes">Programs</a></li>
                     <li><a href="#impact" data-en="Impact" data-fr="Impact">Impact</a></li>
                     <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
                 </ul>
@@ -53,30 +53,6 @@
         </div>
     </section>
 
-    <section id="programs" class="programs">
-        <div class="container">
-            <h2 class="section-title fade-in" data-en="Our Programs" data-fr="Nos Programmes">Our Programs</h2>
-            <div class="programs-grid">
-                <div class="program-card fade-in">
-                    <h3 data-en="Education & Skills Development" data-fr="Boot Camps">Boot Camps</h3>
-                    <p data-en="Providing quality education and vocational training to empower individuals with the skills needed for economic growth and personal development." data-fr="Fournir une éducation de qualité et une formation professionnelle pour autonomiser les individus avec les compétences nécessaires à la croissance économique et au développement personnel.">Providing quality education and vocational training to empower individuals with the skills needed for economic growth and personal development.</p>
-                </div>
-                <div class="program-card fade-in">
-                    <h3 data-en="Interview Series" data-fr="Séries d'interview">Interview Series</h3>
-                    <p data-en="Supporting local communities through capacity building initiatives that strengthen governance and promote inclusive participation in development processes." data-fr="Soutenir les communautés locales par des initiatives de renforcement des capacités qui renforcent la gouvernance et favorisent la participation inclusive aux processus de développement.">Supporting local communities through capacity building initiatives that strengthen governance and promote inclusive participation in development processes.</p>
-                </div>
-                <div class="program-card fade-in">
-                    <h3 data-en="Economic Development" data-fr="Développement Économique">Economic Development</h3>
-                    <p data-en="Fostering entrepreneurship and supporting small businesses to create sustainable livelihoods and drive economic growth in rural and urban areas." data-fr="Favoriser l'entrepreneuriat et soutenir les petites entreprises pour créer des moyens de subsistance durables et stimuler la croissance économique dans les zones rurales et urbaines.">Fostering entrepreneurship and supporting small businesses to create sustainable livelihoods and drive economic growth in rural and urban areas.</p>
-                </div>
-                <div class="program-card fade-in">
-                    <h3 data-en="Social Innovation" data-fr="Innovation Sociale">Social Innovation</h3>
-                    <p data-en="Leveraging technology and innovative approaches to address social challenges and improve access to essential services." data-fr="Tirer parti de la technologie et d'approches innovantes pour relever les défis sociaux et améliorer l'accès aux services essentiels.">Leveraging technology and innovative approaches to address social challenges and improve access to essential services.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="impact" class="impact">
         <div class="container">
             <h2 class="section-title fade-in" data-en="Our Impact" data-fr="Notre Impact">Our Impact</h2>
@@ -101,7 +77,16 @@
         <div class="container">
             <h2 class="section-title fade-in" data-en="Get In Touch" data-fr="Nous Contacter">Get In Touch</h2>
             <div class="contact-content">
-                <div class="contact-form fade-in">
+
+
+
+                <!-- Button to show the form -->
+                <button class="write-message-btn fade-in" id="writeMessageBtn" data-en="Write us a message" data-fr="Écrivez-nous un message">
+                    Write us a message
+                </button>
+                
+                <!-- Contact form (initially hidden) -->
+                <div class="contact-form" id="contactForm">
                     <h3 data-en="Send us a message" data-fr="Envoyez-nous un message">Send us a message</h3>
                     <form>
                         <div class="form-group">
@@ -123,6 +108,8 @@
                         <button type="submit" class="cta-button" data-en="Send Message" data-fr="Envoyer le Message">Send Message</button>
                     </form>
                 </div>
+
+
                 <div class="contact-info fade-in">
                     <div class="contact-item">
                         <h4 data-en="Address" data-fr="Adresse">Address</h4>
