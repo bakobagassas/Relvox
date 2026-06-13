@@ -1,6 +1,6 @@
 
         // Language switching functionality
-        let currentLang = 'en';
+        let currentLang = 'fr'; // Default language
         
         function switchLanguage(lang) {
             currentLang = lang;

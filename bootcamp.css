@@ -21,6 +21,7 @@
     --bc-light:     #f7fafc;
     --bc-white:     #ffffff;
     --bc-border:    #e2e8f0;
+    --bc-darkgrey: #2d3748;
     --bc-radius:    16px;
     --bc-radius-sm: 10px;
     --bc-shadow:    0 10px 30px rgba(0,0,0,0.08);
@@ -108,7 +109,7 @@
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--bc-dark) 0%, #6b21a8 100%);
+    background: linear-gradient(135deg, var(--bc-dark) 0%, #1a082e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -117,7 +118,7 @@
 .bc-hero__theme {
     font-size: clamp(1rem, 2.5vw, 1.35rem);
     font-weight: 600;
-    color: var(--bc-purple);
+    color: var(--bc-darkgrey);
     margin-bottom: 1.2rem;
     font-style: italic;
 }
@@ -166,7 +167,7 @@
     border: none;
 }
 .bc-btn--primary {
-    background: linear-gradient(135deg, var(--bc-pink) 0%, var(--bc-purple) 100%);
+    background: linear-gradient(135deg, var(--bc-pink) 0%, var(--bc-darkgrey) 100%);
     color: var(--bc-white);
     box-shadow: 0 8px 24px rgba(236,72,153,0.3);
 }
@@ -710,14 +711,14 @@
    ============================================================ */
 .bc-register {
     position: relative;
-    background: linear-gradient(135deg, #1a082e 0%, #3b0764 50%, #1a082e 100%);
+    background: linear-gradient(135deg, #d3d3d3 0%, #a3a3a3 50%, #d3d3d3 100%);
     color: var(--bc-white);
     overflow: hidden;
     text-align: center;
 }
 .bc-register__bg { pointer-events: none; }
 .shape--4 { width: 400px; height: 400px; top: -120px; right: -100px; background: #ec4899; }
-.shape--5 { width: 280px; height: 280px; bottom: -80px; left: -60px; background: #7c3aed; }
+.shape--5 { width: 280px; height: 280px; bottom: -80px; left: -60px; background: #D3D3D3; }
 .bc-register__inner {
     position: relative;
     z-index: 2;
@@ -748,7 +749,7 @@
 }
 .bc-btn--primary.bc-register a,
 .bc-register .bc-btn--primary {
-    background: linear-gradient(135deg, var(--bc-pink) 0%, #a855f7 100%);
+    background: linear-gradient(135deg, var(--bc-pink) 0%, #a9a9a9 100%);
 }
 
 /* ============================================================
