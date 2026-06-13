@@ -116,6 +116,26 @@
                 closeFormBtn.click();
             }
         });
+        function openDay(dayId){
+
+        document
+            .querySelectorAll('.day-content')
+            .forEach(day=>{
+                day.classList.remove('active');
+            });
+
+        document
+            .querySelectorAll('.day-btn')
+            .forEach(btn=>{
+                btn.classList.remove('active');
+            });
+
+        document
+            .getElementById(dayId)
+            .classList.add('active');
+
+        event.target.classList.add('active');
+    }
 
         // Handle form submission
         document.querySelector('form').addEventListener('submit', function(e) {
