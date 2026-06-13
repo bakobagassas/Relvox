@@ -1,723 +1,908 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relvox - Release your potential</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relvox Leadership Bootcamp 2026</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootcamp.css" />
 </head>
 <body>
-    <header>
-        <nav class="container">
+    <nav class="container">
             <div class="logo">
                 Relvox
             </div>
             <div class="nav-center">
                 <ul class="nav-links">
                     <li><a href="./index.html" data-en="Home" data-fr="Accueil">Home</a></li>
-                    <li><a href="./programs.html" data-en="Programs" data-fr="Programmes">Programs</a></li>
-                    <li><a href="./voices.html" data-en="Voices" data-fr="Voix">Voices</a></li>
-                    <li><a href="./bootcamp.html" data-en="Boot Camps" data-fr="Boot Camps">Boot Camp 2026</a></li>
-                    <li><a href="#impact" data-en="Impact" data-fr="Impact">Impact</a></li>
-                    <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
+                    <li><a href="./about.html" data-en="About" data-fr="À propos">About</a></li>
+                    <li><a href="./bootcamp.html" data-en="Boot Camps" data-fr="Boot Camps">BootCamp 2026</a></li>
                 </ul>
                 <div class="language-switch">
-                    <div class="lang-option active" data-lang="en">EN</div>
                     <div class="lang-option" data-lang="fr">FR</div>
+                    <div class="lang-option active" data-lang="en">EN</div>
+                    
                 </div>
             </div>
         </nav>
-    </header>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Art & Tech au service de l'impact</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #fff5f7;
-    --surface: #ffffff;
-    --surface2: #ffeef2;
-    --border: rgba(220,80,120,0.12);
-    --border-accent: rgba(220,80,120,0.25);
-    --text: #2a1520;
-    --text-muted: #7a4558;
-    --text-dim: #c4899f;
-    --pink: #d63870;
-    --pink-light: #e8679a;
-    --pink-pale: #fce8ef;
-    --pink-mid: #f0b3c8;
-    --rose: #b02458;
-  }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
-    min-height: 100vh;
-  }
-
-  /* Hero */
-  .hero {
-    padding: 80px 40px 60px;
-    max-width: 900px;
-    margin: 0 auto;
-    border-bottom: 0.5px solid var(--border-accent);
-    position: relative;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--pink), var(--pink-light), transparent);
-  }
-
-  .hero-eyebrow {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--pink);
-    margin-bottom: 20px;
-  }
-
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 5vw, 52px);
-    font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 20px;
-    color: var(--text);
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--pink);
-  }
-
-  .hero-desc {
-    font-size: 15px;
-    color: var(--text-muted);
-    max-width: 540px;
-    margin-bottom: 32px;
-    line-height: 1.8;
-  }
-
-  .hero-stats {
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
-
-  .stat { display: flex; flex-direction: column; gap: 4px; }
-
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--pink);
-  }
-
-  .stat-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-dim);
-  }
-
-  /* Contest banner */
-  .contest-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
-    border-bottom: 0.5px solid var(--border-accent);
-    background: var(--surface);
-  }
-
-  .section-label {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--pink);
-    margin-bottom: 12px;
-  }
-
-  .contest-intro {
-    font-size: 14px;
-    color: var(--text-muted);
-    max-width: 620px;
-    margin-bottom: 24px;
-    line-height: 1.8;
-  }
-
-  .contest-intro strong { color: var(--text); font-weight: 500; }
-
-  .themes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 8px;
-  }
-
-  .theme-pill {
-    border: 0.5px solid var(--border-accent);
-    border-radius: 4px;
-    padding: 10px 14px;
-    font-size: 12px;
-    color: var(--text-muted);
-    background: var(--pink-pale);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: border-color 0.2s, background 0.2s;
-  }
-
-  .theme-pill:hover {
-    border-color: var(--pink);
-    background: var(--pink-mid);
-    color: var(--rose);
-  }
-
-  .theme-pill::before {
-    content: '◆';
-    font-size: 6px;
-    color: var(--pink);
-    flex-shrink: 0;
-  }
-
-  /* Schedule */
-  .schedule {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 40px 80px;
-  }
-
-  .day-block {
-    border-bottom: 0.5px solid var(--border-accent);
-    padding: 48px 0;
-  }
-
-  .day-block:last-child { border-bottom: none; }
-
-  .day-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-    margin-bottom: 32px;
-  }
-
-  .day-badge {
-    flex-shrink: 0;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: var(--surface);
-    border: 1.5px solid var(--pink-mid);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .day-badge .j {
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-dim);
-    line-height: 1;
-  }
-
-  .day-badge .num {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.1;
-    color: var(--pink);
-  }
-
-  .day-meta h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    color: var(--text);
-  }
-
-  .day-weekday {
-    font-size: 12px;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  .sessions { display: flex; flex-direction: column; gap: 2px; }
-
-  .session {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: 6px;
-    overflow: hidden;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-
-  .session:hover {
-    border-color: var(--pink-mid);
-    box-shadow: 0 2px 12px rgba(214,56,112,0.06);
-  }
-
-  .session-time {
-    padding: 16px;
-    background: var(--pink-pale);
-    border-right: 0.5px solid var(--border);
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--pink);
-    display: flex;
-    align-items: flex-start;
-    padding-top: 18px;
-    letter-spacing: 0.03em;
-  }
-
-  .session-body { padding: 16px 20px; }
-
-  .session-name {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: 6px;
-  }
-
-  .session-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.7;
-    margin-bottom: 8px;
-  }
-
-  .session-facilitator {
-    font-size: 11px;
-    color: var(--text-dim);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .session-facilitator::before { content: '—'; }
-
-  .session-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 10px;
-  }
-
-  .tag {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    padding: 3px 10px;
-    border-radius: 20px;
-    border: 0.5px solid var(--pink-mid);
-    color: var(--rose);
-    background: var(--pink-pale);
-  }
-
-  /* Split layout day 5 */
-  .split-sessions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
-  .split-card {
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: 6px;
-    padding: 20px;
-  }
-
-  .split-card h3 {
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    padding-bottom: 8px;
-    border-bottom: 0.5px solid var(--border-accent);
-    color: var(--rose);
-  }
-
-  .split-card .context {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-    line-height: 1.7;
-    font-style: italic;
-  }
-
-  .split-card ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-
-  .split-card ul li {
-    font-size: 12px;
-    color: var(--text-muted);
-    padding-left: 14px;
-    position: relative;
-    line-height: 1.6;
-  }
-
-  .split-card ul li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--pink-light);
-    font-size: 11px;
-  }
-
-  .girls-card { border-top: 2px solid var(--pink); }
-  .boys-card  { border-top: 2px solid var(--pink-mid); }
-
-  /* Art ateliers day 6 */
-  .ateliers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 6px;
-    margin-top: 10px;
-  }
-
-  .atelier-item {
-    background: var(--pink-pale);
-    border: 0.5px solid var(--border-accent);
-    border-radius: 4px;
-    padding: 10px 12px;
-    font-size: 11px;
-    color: var(--rose);
-    text-align: center;
-    line-height: 1.5;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 32px 40px;
-    border-top: 0.5px solid var(--border-accent);
-    background: var(--surface);
-    font-size: 11px;
-    color: var(--text-dim);
-    letter-spacing: 0.05em;
-  }
-
-  /* Responsive */
-  @media (max-width: 640px) {
-    .hero, .contest-section, .schedule { padding-left: 20px; padding-right: 20px; }
-    .hero { padding-top: 48px; }
-    .session { grid-template-columns: 85px 1fr; }
-    .split-sessions { grid-template-columns: 1fr; }
-    .day-header { gap: 16px; }
-    .hero-stats { gap: 20px; }
-  }
-
-  /* Fade-in */
-  .day-block {
-    opacity: 0;
-    transform: translateY(16px);
-    animation: fadeUp 0.5s forwards;
-  }
-  .day-block:nth-child(1) { animation-delay: 0.05s; }
-  .day-block:nth-child(2) { animation-delay: 0.1s; }
-  .day-block:nth-child(3) { animation-delay: 0.15s; }
-  .day-block:nth-child(4) { animation-delay: 0.2s; }
-  .day-block:nth-child(5) { animation-delay: 0.25s; }
-  .day-block:nth-child(6) { animation-delay: 0.3s; }
-  .day-block:nth-child(7) { animation-delay: 0.35s; }
-
-  @keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>
-</head>
-<body>
-
-<section class="hero">
-  <p class="hero-eyebrow">Programme officiel</p>
-  <h1>Art & Tech au service<br>de <em>l'impact</em> :<br>Imaginer un futur inclusif</h1>
-  <p class="hero-desc">
-    Une semaine d'immersion transformatrice mêlant bien-être, expression artistique, compétences numériques et engagement citoyen — pour des jeunes qui veulent changer le monde.
-  </p>
-  <div class="hero-stats">
-    <div class="stat"><span class="stat-num">7</span><span class="stat-label">Jours</span></div>
-    <div class="stat"><span class="stat-num">6</span><span class="stat-label">Thèmes</span></div>
-    <div class="stat"><span class="stat-num">1</span><span class="stat-label">Concours final</span></div>
-  </div>
-</section>
-
-<section class="contest-section">
-  <p class="section-label">Fil rouge — Concours Art &amp; Impact</p>
-  <p class="contest-intro">
-    En parallèle des sessions, les participant·e·s travaillent en équipe sur un <strong>projet Art/Design à impact social</strong> : campagne visuelle, performance, art oratoire, vidéo ou poster. Chaque équipe choisit un problème de société et propose des solutions concrètes à travers leur œuvre.
-  </p>
-  <div class="themes-grid">
-    <div class="theme-pill">Égalité filles-garçons dans l'éducation</div>
-    <div class="theme-pill">Lutte contre les violences basées sur le genre</div>
-    <div class="theme-pill">Santé mentale des jeunes</div>
-    <div class="theme-pill">Engagement citoyen & solidarité communautaire</div>
-    <div class="theme-pill">Lutte contre les stéréotypes de genre</div>
-    <div class="theme-pill">Accès des filles au digital et à la technologie</div>
-  </div>
-</section>
-
-<main class="schedule">
-
-  <!-- JOUR 1 -->
-  <div class="day-block">
-    <div class="day-header">
-      <div class="day-badge"><span class="j">Jour</span><span class="num">1</span></div>
-      <div class="day-meta">
-        <h2>Identité & Bien-être</h2>
-        <span class="day-weekday">Lundi</span>
-      </div>
-    </div>
-    <div class="sessions">
-      <div class="session">
-        <div class="session-time">8h00 – 9h00</div>
-        <div class="session-body">
-          <div class="session-name">Cercle d'ouverture sacré & partage d'intentions</div>
-          <div class="session-desc">Rituel d'entrée en programme : chaque participant·e exprime ses attentes, ses peurs et ses espoirs. Création d'un contrat de groupe fondé sur le respect, la bienveillance et la confidentialité. Ce moment pose les bases de la confiance collective pour toute la semaine.</div>
-          <div class="session-facilitator">Team Relvox</div>
+    <!-- ===== SECTION 1: HERO ===== -->
+    <section class="bc-hero">
+        <div class="bc-hero__bg-shapes" aria-hidden="true">
+            <span class="shape shape--circle shape--1"></span>
+            <span class="shape shape--circle shape--2"></span>
+            <span class="shape shape--pill shape--3"></span>
+            <span class="shape shape--dot-grid"></span>
         </div>
-      </div>
-      <div class="session">
-        <div class="session-time">9h00 – 11h30</div>
-        <div class="session-body">
-          <div class="session-name">Intelligence émotionnelle & santé mentale</div>
-          <div class="session-desc">Exploration des émotions comme outils de connaissance de soi. Les jeunes apprennent à identifier, nommer et réguler leurs émotions. La session inclut une séquence de yoga et méditation profonde pour ancrer les apprentissages dans le corps et renforcer la résilience intérieure.</div>
-          <div class="session-facilitator">Nadira Foumakoye</div>
-          <div class="session-tags"><span class="tag">Yoga & méditation</span></div>
+        <div class="container bc-hero__inner">
+            <div class="bc-hero__eyebrow fade-in"
+                 data-en="Relvox · Niger · 2026"
+                 data-fr="Relvox · Niger · 2026">
+                Relvox · Niger · 2026
+            </div>
+            <h1 class="bc-hero__title fade-in"
+                data-en="Leadership Bootcamp 2026"
+                data-fr="Bootcamp Leadership 2026">
+                Leadership Bootcamp 2026
+            </h1>
+            <p class="bc-hero__theme fade-in"
+               data-en="Art, Tech and Service: Imagining an Inclusive Future"
+               data-fr="Art, Tech et Service : Imaginer un futur inclusif">
+                Art, Tech and Service: Imagining an Inclusive Future
+            </p>
+            <p class="bc-hero__desc fade-in"
+               data-en="A 7-day immersive experience for young leaders ready to build skills, spark ideas, and create real change in their communities."
+               data-fr="Une expérience immersive de 7 jours pour les jeunes leaders prêts à développer leurs compétences, faire naître des idées et créer un vrai changement dans leur communauté.">
+                A 7-day immersive experience for young leaders ready to build skills, spark ideas, and create real change in their communities.
+            </p>
+            <a href="#bc-register" class="bc-btn bc-btn--primary fade-in"
+               data-en="Apply Now"
+               data-fr="Postuler maintenant">
+                Apply Now
+            </a>
         </div>
-      </div>
-      <div class="session">
-        <div class="session-time">11h30 – 13h30</div>
-        <div class="session-body">
-          <div class="session-name">Identité & estime de soi</div>
-          <div class="session-desc">Animée par un·e psychologue invité·e, cette session guide les participant·e·s dans l'exploration de leur identité — qui ils/elles sont, d'où ils/elles viennent, ce qu'ils/elles valent. Des exercices pratiques de déconstruction des croyances limitantes et de mise en valeur de soi sont au programme.</div>
-          <div class="session-facilitator">Psychologue invité·e</div>
+        <div class="bc-hero__scroll-hint" aria-hidden="true">
+            <span></span>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- JOUR 2 -->
-  <div class="day-block">
-    <div class="day-header">
-      <div class="day-badge"><span class="j">Jour</span><span class="num">2</span></div>
-      <div class="day-meta">
-        <h2>Expression & Communication</h2>
-        <span class="day-weekday">Mardi</span>
-      </div>
-    </div>
-    <div class="sessions">
-      <div class="session">
-        <div class="session-time">8h00 – 8h30</div>
-        <div class="session-body">
-          <div class="session-name">Icebreaker</div>
-          <div class="session-desc">Activité courte et dynamique pour mettre le groupe en énergie, briser les inhibitions du matin et préparer les esprits aux sessions de prise de parole qui suivent.</div>
-        </div>
-      </div>
-      <div class="session">
-        <div class="session-time">8h30 – 11h00</div>
-        <div class="session-body">
-          <div class="session-name">Art oratoire intensif</div>
-          <div class="session-desc">Atelier pratique d'éloquence et de prise de parole en public. Travail sur la voix, la posture, la gestion du stress et la structure d'un discours percutant. Les participant·e·s apprennent à convaincre, émouvoir et mobiliser une audience — compétence directement utile pour le projet final.</div>
-          <div class="session-facilitator">Ismaël Issaka Ali</div>
-        </div>
-      </div>
-      <div class="session">
-        <div class="session-time">11h00 – 13h00</div>
-        <div class="session-body">
-          <div class="session-name">Personal branding</div>
-          <div class="session-desc">Comment construire une image authentique et cohérente de soi, en ligne comme hors ligne ? Les jeunes explorent leur valeur unique, leur message personnel et les façons de le communiquer avec clarté et impact — utile pour leur future vie professionnelle et leur engagement citoyen.</div>
-          <div class="session-facilitator">Soukaradji Barmou</div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- ===== SECTION 2: ABOUT ===== -->
+    <section class="bc-about" id="bc-about">
+        <div class="container">
+            <h2 class="section-title fade-in"
+                data-en="What You'll Experience"
+                data-fr="Ce que vous vivrez">
+                What You'll Experience
+            </h2>
+            <p class="bc-about__intro fade-in"
+               data-en="Relvox Bootcamp 2026 is a hands-on leadership summit that blends workshops, community service, mentorship, and a final innovation challenge into one unforgettable week."
+               data-fr="Le Bootcamp Relvox 2026 est un sommet de leadership pratique qui mêle ateliers, service communautaire, mentorat et défi d'innovation finale en une semaine inoubliable.">
+                Relvox Bootcamp 2026 is a hands-on leadership summit that blends workshops, community service, mentorship, and a final innovation challenge into one unforgettable week.
+            </p>
+            <div class="bc-about__grid">
 
-  <!-- JOUR 3 -->
-  <div class="day-block">
-    <div class="day-header">
-      <div class="day-badge"><span class="j">Jour</span><span class="num">3</span></div>
-      <div class="day-meta">
-        <h2>Compétences numériques</h2>
-        <span class="day-weekday">Mercredi</span>
-      </div>
-    </div>
-    <div class="sessions">
-      <div class="session">
-        <div class="session-time">8h00 – 8h30</div>
-        <div class="session-body">
-          <div class="session-name">Icebreaker</div>
-          <div class="session-desc">Mise en mouvement collective pour démarrer la journée avec énergie avant les ateliers techniques.</div>
-        </div>
-      </div>
-      <div class="session">
-        <div class="session-time">8h30 – 11h00</div>
-        <div class="session-body">
-          <div class="session-name">IA & outils digitaux pour tous</div>
-          <div class="session-desc">Introduction accessible aux outils d'intelligence artificielle et aux ressources numériques utiles au quotidien. Les participant·e·s apprennent les bases pour créer, rechercher, communiquer et produire à l'aide du digital — avec un focus sur leur utilité concrète pour le projet de campagne.</div>
-          <div class="session-facilitator">Étudiants ADU (coord. Soraya)</div>
-        </div>
-      </div>
-      <div class="session">
-        <div class="session-time">11h00 – 13h00</div>
-        <div class="session-body">
-          <div class="session-name">Création de contenu numérique</div>
-          <div class="session-desc">Atelier pratique de production : comment créer des visuels, des publications ou de courtes vidéos engageantes pour les réseaux sociaux et les campagnes de sensibilisation. Les participant·e·s repartent avec des créations concrètes et des compétences transférables.</div>
-          <div class="session-facilitator">Falmata Aissami</div>
-        </div>
-      </div>
-    </div>
-  </div>
+                <div class="bc-skill-card fade-in">
+                    <div class="bc-skill-card__icon">🧭</div>
+                    <h3 data-en="Leadership Skills" data-fr="Compétences en leadership">Leadership Skills</h3>
+                    <p data-en="Discover your leadership style, build confidence, and learn to inspire others through action."
+                       data-fr="Découvrez votre style de leadership, renforcez votre confiance et apprenez à inspirer les autres par l'action.">
+                        Discover your leadership style, build confidence, and learn to inspire others through action.
+                    </p>
+                </div>
 
-  <!-- JOUR 4 -->
-  <div class="day-block">
-    <div class="day-header">
-      <div class="day-badge"><span class="j">Jour</span><span class="num">4</span></div>
-      <div class="day-meta">
-        <h2>Engagement communautaire & volontariat</h2>
-        <span class="day-weekday">Jeudi</span>
-      </div>
-    </div>
-    <div class="sessions">
-      <div class="session">
-        <div class="session-time">8h00 – 13h30</div>
-        <div class="session-body">
-          <div class="session-name">Organiser l'action collective</div>
-          <div class="session-desc">Journée en deux temps animée par un·e organisateur·rice communautaire invité·e. Le matin : comprendre les mécanismes du changement social, apprendre à mobiliser une communauté, concevoir une campagne de sensibilisation. L'après-midi : mise en pratique lors d'une action de volontariat sur le terrain — orphelinat, ONG, école ou autre lieu à définir.</div>
-          <div class="session-facilitator">Organisateur·rice communautaire invité·e</div>
-          <div class="session-tags">
-            <span class="tag">Volontariat terrain</span>
-            <span class="tag">Changement social</span>
-          </div>
+                <div class="bc-skill-card fade-in">
+                    <div class="bc-skill-card__icon">💻</div>
+                    <h3 data-en="Digital Skills" data-fr="Compétences numériques">Digital Skills</h3>
+                    <p data-en="Explore AI tools, digital content creation, and responsible technology use for social impact."
+                       data-fr="Explorez les outils d'IA, la création de contenu numérique et l'utilisation responsable de la technologie pour l'impact social.">
+                        Explore AI tools, digital content creation, and responsible technology use for social impact.
+                    </p>
+                </div>
+
+                <div class="bc-skill-card fade-in">
+                    <div class="bc-skill-card__icon">🎙️</div>
+                    <h3 data-en="Public Speaking" data-fr="Prise de parole en public">Public Speaking</h3>
+                    <p data-en="Master voice, posture, storytelling, and persuasive communication in front of an audience."
+                       data-fr="Maîtrisez la voix, la posture, la narration et la communication persuasive devant un public.">
+                        Master voice, posture, storytelling, and persuasive communication in front of an audience.
+                    </p>
+                </div>
+
+                <div class="bc-skill-card fade-in">
+                    <div class="bc-skill-card__icon">🫀</div>
+                    <h3 data-en="Emotional Intelligence" data-fr="Intelligence émotionnelle">Emotional Intelligence</h3>
+                    <p data-en="Develop self-awareness, emotional regulation, resilience, and mindfulness practices."
+                       data-fr="Développez la conscience de soi, la régulation émotionnelle, la résilience et les pratiques de pleine conscience.">
+                        Develop self-awareness, emotional regulation, resilience, and mindfulness practices.
+                    </p>
+                </div>
+
+                <div class="bc-skill-card fade-in">
+                    <div class="bc-skill-card__icon">🤝</div>
+                    <h3 data-en="Community Service" data-fr="Service communautaire">Community Service</h3>
+                    <p data-en="Partner with local organizations and experience the power of giving back to your community."
+                       data-fr="Partenariat avec des organisations locales et l'expérience de la force du retour à la communauté.">
+                        Partner with local organizations and experience the power of giving back to your community.
+                    </p>
+                </div>
+
+                <div class="bc-skill-card fade-in">
+                    <div class="bc-skill-card__icon">🌱</div>
+                    <h3 data-en="Social Impact Project" data-fr="Projet d'impact social">Social Impact Project</h3>
+                    <p data-en="Design and present a real project that addresses a social issue using art, tech, or community action."
+                       data-fr="Concevez et présentez un vrai projet qui aborde un problème social à travers l'art, la technologie ou l'action communautaire.">
+                        Design and present a real project that addresses a social issue using art, tech, or community action.
+                    </p>
+                </div>
+
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- JOUR 5 -->
-  <div class="day-block">
-    <div class="day-header">
-      <div class="day-badge"><span class="j">Jour</span><span class="num">5</span></div>
-      <div class="day-meta">
-        <h2>Safe Spaces</h2>
-        <span class="day-weekday">Vendredi — Sessions séparées simultanées</span>
-      </div>
-    </div>
-    <div class="split-sessions">
-      <div class="split-card girls-card">
-        <h3>Session filles uniquement</h3>
-        <p class="context">Un espace sécurisé pour parler librement, partager des expériences et développer des stratégies concrètes d'affirmation de soi.</p>
-        <ul>
-          <li>Gérer le mansplaining sans agressivité</li>
-          <li>Construire la solidarité féminine — se soutenir publiquement</li>
-          <li>Techniques d'assertivité spécifiques aux filles</li>
-          <li>Mises en situation et jeux de rôle</li>
-        </ul>
-      </div>
-      <div class="split-card boys-card">
-        <h3>Session garçons — Être allié, pas sauveur</h3>
-        <p class="context">Animée par un facilitateur formé aux questions de genre et un mentor masculin positif. Un espace de déconstruction honnête et bienveillante.</p>
-        <ul>
-          <li>Statistiques sur les inégalités au Niger : mariage précoce, scolarisation, VBG</li>
-          <li>"Comment je contribue au problème, même sans le vouloir ?"</li>
-          <li>Concepts : privilège masculin, male gaze, mansplaining, manterrupting</li>
-          <li>Masculinité positive et allié de genre</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+    <!-- ===== SECTION 3: FINAL CHALLENGE ===== -->
+    <section class="bc-challenge" id="bc-challenge">
+        <div class="container">
+            <h2 class="section-title fade-in"
+                data-en="The Final Challenge"
+                data-fr="Le Défi Final">
+                The Final Challenge
+            </h2>
+            <p class="bc-challenge__desc fade-in"
+               data-en="Throughout the week, teams design a project using art, technology, media or community action to address a social issue and propose practical solutions. On the final day, every team presents their work to a panel of judges and the full community."
+               data-fr="Tout au long de la semaine, les équipes conçoivent un projet utilisant l'art, la technologie, les médias ou l'action communautaire pour aborder un problème social et proposer des solutions pratiques. Le dernier jour, chaque équipe présente son travail à un jury et à toute la communauté.">
+                Throughout the week, teams design a project using art, technology, media or community action to address a social issue and propose practical solutions. On the final day, every team presents their work to a panel of judges and the full community.
+            </p>
 
-  <!-- JOUR 6 -->
-  <div class="day-block">
-    <div class="day-header">
-      <div class="day-badge"><span class="j">Jour</span><span class="num">6</span></div>
-      <div class="day-meta">
-        <h2>Journée artistique</h2>
-        <span class="day-weekday">Samedi</span>
-      </div>
-    </div>
-    <div class="sessions">
-      <div class="session">
-        <div class="session-time">8h30 – 10h30</div>
-        <div class="session-body">
-          <div class="session-name">Ateliers artistiques au choix</div>
-          <div class="session-desc">Les participant·e·s rejoignent l'atelier correspondant à leur forme d'expression pour le projet final.</div>
-          <div class="ateliers-grid">
-            <div class="atelier-item">Art oratoire & mise en scène</div>
-            <div class="atelier-item">Slam & écriture créative</div>
-            <div class="atelier-item">Peinture & illustration engagée</div>
-            <div class="atelier-item">Création vidéo smartphone</div>
-            <div class="atelier-item">Design de campagne & affiches</div>
-          </div>
+            <div class="bc-challenge__columns">
+
+                <!-- Formats -->
+                <div class="bc-challenge__col fade-in">
+                    <h3 class="bc-challenge__col-title"
+                        data-en="Possible Project Formats"
+                        data-fr="Formats de projet possibles">
+                        Possible Project Formats
+                    </h3>
+                    <ul class="bc-format-list">
+                        <li data-en="Video campaign" data-fr="Campagne vidéo">Video campaign</li>
+                        <li data-en="Social media campaign" data-fr="Campagne sur les réseaux sociaux">Social media campaign</li>
+                        <li data-en="Public speaking performance" data-fr="Discours public">Public speaking performance</li>
+                        <li data-en="Poster campaign" data-fr="Campagne d'affichage">Poster campaign</li>
+                        <li data-en="Community action project" data-fr="Projet d'action communautaire">Community action project</li>
+                        <li data-en="Artistic performance" data-fr="Performance artistique">Artistic performance</li>
+                    </ul>
+                </div>
+
+                <!-- Criteria -->
+                <div class="bc-challenge__col fade-in">
+                    <h3 class="bc-challenge__col-title"
+                        data-en="Evaluation Criteria"
+                        data-fr="Critères d'évaluation">
+                        Evaluation Criteria
+                    </h3>
+                    <div class="bc-criteria">
+                        <div class="bc-criteria__item">
+                            <span class="bc-criteria__label" data-en="Creativity" data-fr="Créativité">Creativity</span>
+                            <div class="bc-criteria__bar"><div class="bc-criteria__fill" style="--pct:90%"></div></div>
+                        </div>
+                        <div class="bc-criteria__item">
+                            <span class="bc-criteria__label" data-en="Social Impact" data-fr="Impact social">Social Impact</span>
+                            <div class="bc-criteria__bar"><div class="bc-criteria__fill" style="--pct:95%"></div></div>
+                        </div>
+                        <div class="bc-criteria__item">
+                            <span class="bc-criteria__label" data-en="Feasibility" data-fr="Faisabilité">Feasibility</span>
+                            <div class="bc-criteria__bar"><div class="bc-criteria__fill" style="--pct:75%"></div></div>
+                        </div>
+                        <div class="bc-criteria__item">
+                            <span class="bc-criteria__label" data-en="Teamwork" data-fr="Travail d'équipe">Teamwork</span>
+                            <div class="bc-criteria__bar"><div class="bc-criteria__fill" style="--pct:85%"></div></div>
+                        </div>
+                        <div class="bc-criteria__item">
+                            <span class="bc-criteria__label" data-en="Presentation Quality" data-fr="Qualité de la présentation">Presentation Quality</span>
+                            <div class="bc-criteria__bar"><div class="bc-criteria__fill" style="--pct:80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-      <div class="session">
-        <div class="session-time">10h30 – 11h00</div>
-        <div class="session-body">
-          <div class="session-name">Pause</div>
-          <div class="session-desc">Temps libre et convivialité avant la grande phase de production.</div>
+    </section>
+
+    <!-- ===== SECTION 4: CHALLENGE THEMES ===== -->
+    <section class="bc-themes" id="bc-themes">
+        <div class="container">
+            <h2 class="section-title fade-in"
+                data-en="Challenge Themes"
+                data-fr="Thèmes du défi">
+                Challenge Themes
+            </h2>
+            <p class="bc-themes__intro fade-in"
+               data-en="Teams choose one of these themes to ground their final project."
+               data-fr="Les équipes choisissent l'un de ces thèmes pour ancrer leur projet final.">
+                Teams choose one of these themes to ground their final project.
+            </p>
+            <div class="bc-themes__grid">
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">⚖️</span>
+                    <h4 data-en="Gender Equality in Education" data-fr="Égalité des genres dans l'éducation">Gender Equality in Education</h4>
+                    <p data-en="Exploring barriers and building pathways for equal access to quality education."
+                       data-fr="Explorer les obstacles et construire des voies d'accès à une éducation de qualité pour tous.">
+                        Exploring barriers and building pathways for equal access to quality education.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">🧠</span>
+                    <h4 data-en="Mental Health of Young People" data-fr="Santé mentale des jeunes">Mental Health of Young People</h4>
+                    <p data-en="Destigmatizing mental health and building support networks in youth communities."
+                       data-fr="Déstigmatiser la santé mentale et construire des réseaux de soutien dans les communautés jeunes.">
+                        Destigmatizing mental health and building support networks in youth communities.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">🗳️</span>
+                    <h4 data-en="Civic Engagement & Community Service" data-fr="Engagement civique et service communautaire">Civic Engagement & Community Service</h4>
+                    <p data-en="Activating young people as agents of democratic and civic life."
+                       data-fr="Activer les jeunes comme agents de la vie démocratique et civique.">
+                        Activating young people as agents of democratic and civic life.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">🌍</span>
+                    <h4 data-en="Positive Masculinities & Mutual Respect" data-fr="Masculinités positives et respect mutuel">Positive Masculinities & Mutual Respect</h4>
+                    <p data-en="Redefining what it means to be a man in a way that uplifts everyone."
+                       data-fr="Redéfinir ce que signifie être un homme d'une manière qui valorise tout le monde.">
+                        Redefining what it means to be a man in a way that uplifts everyone.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">👩‍💻</span>
+                    <h4 data-en="Girls' Access to Technology" data-fr="Accès des filles à la technologie">Girls' Access to Technology</h4>
+                    <p data-en="Closing the digital gender gap and empowering girls in STEM fields."
+                       data-fr="Réduire le fossé numérique entre les genres et autonomiser les filles dans les domaines STEM.">
+                        Closing the digital gender gap and empowering girls in STEM fields.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">🚫</span>
+                    <h4 data-en="Fighting Gender Stereotypes" data-fr="Lutter contre les stéréotypes de genre">Fighting Gender Stereotypes</h4>
+                    <p data-en="Challenging harmful assumptions and promoting a culture of inclusion and respect."
+                       data-fr="Remettre en question les suppositions nuisibles et promouvoir une culture d'inclusion et de respect.">
+                        Challenging harmful assumptions and promoting a culture of inclusion and respect.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">🏆</span>
+                    <h4 data-en="Youth Leadership" data-fr="Leadership des jeunes">Youth Leadership</h4>
+                    <p data-en="Amplifying young voices and creating spaces where youth lead decisions."
+                       data-fr="Amplifier les voix des jeunes et créer des espaces où les jeunes prennent des décisions.">
+                        Amplifying young voices and creating spaces where youth lead decisions.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">🛡️</span>
+                    <h4 data-en="Prevention of School Bullying" data-fr="Prévention du harcèlement scolaire">Prevention of School Bullying</h4>
+                    <p data-en="Building safer, kinder school environments where every student belongs."
+                       data-fr="Construire des environnements scolaires plus sûrs et bienveillants où chaque élève a sa place.">
+                        Building safer, kinder school environments where every student belongs.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">📱</span>
+                    <h4 data-en="Digital Well-being" data-fr="Bien-être numérique">Digital Well-being</h4>
+                    <p data-en="Navigating the online world with balance, safety, and intention."
+                       data-fr="Naviguer dans le monde en ligne avec équilibre, sécurité et intention.">
+                        Navigating the online world with balance, safety, and intention.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">♿</span>
+                    <h4 data-en="Inclusion of Persons with Disabilities" data-fr="Inclusion des personnes handicapées">Inclusion of Persons with Disabilities</h4>
+                    <p data-en="Creating communities and systems where everyone participates fully."
+                       data-fr="Créer des communautés et des systèmes où chacun participe pleinement.">
+                        Creating communities and systems where everyone participates fully.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">🌿</span>
+                    <h4 data-en="Climate Action & Local Solutions" data-fr="Action climatique et solutions locales">Climate Action & Local Solutions</h4>
+                    <p data-en="Empowering young people to lead environmental change in their own communities."
+                       data-fr="Donner aux jeunes les moyens de mener le changement environnemental dans leurs propres communautés.">
+                        Empowering young people to lead environmental change in their own communities.
+                    </p>
+                </div>
+
+                <div class="bc-theme-card fade-in">
+                    <span class="bc-theme-card__icon">📚</span>
+                    <h4 data-en="Education & Opportunity for All" data-fr="Éducation et opportunités pour tous">Education & Opportunity for All</h4>
+                    <p data-en="Designing solutions that make quality learning accessible regardless of background."
+                       data-fr="Concevoir des solutions qui rendent l'apprentissage de qualité accessible quel que soit le milieu.">
+                        Designing solutions that make quality learning accessible regardless of background.
+                    </p>
+                </div>
+
+            </div>
         </div>
-      </div>
-      <div class="session">
-        <div class="session-time">11h00 – 14h30</div>
-        <div class="session-body">
-          <div class="session-name">Production des projets finaux</div>
-          <div class="session-desc">Temps de création intense encadré par les mentors : chaque équipe finalise son œuvre — affiche, vidéo, performance, slam, discours — et prépare sa présentation pour la cérémonie du lendemain. Les coaches circulent pour accompagner, encourager et affiner les productions.</div>
-          <div class="session-tags">
-            <span class="tag">Coaching mentors</span>
-            <span class="tag">Production concrète</span>
-            <span class="tag">Préparation finale</span>
-          </div>
+    </section>
+
+    <!-- ===== SECTION 5: INTERACTIVE SCHEDULE ===== -->
+    <section class="bc-schedule" id="bc-schedule">
+        <div class="container">
+            <h2 class="section-title fade-in"
+                data-en="Weekly Schedule"
+                data-fr="Programme de la semaine">
+                Weekly Schedule
+            </h2>
+            <p class="bc-schedule__intro fade-in"
+               data-en="Click any day to explore what's happening."
+               data-fr="Cliquez sur un jour pour découvrir le programme.">
+                Click any day to explore what's happening.
+            </p>
+
+            <!-- Day tabs -->
+            <div class="bc-day-tabs" role="tablist">
+                <button class="bc-day-tab active" data-day="monday" role="tab" aria-selected="true" aria-controls="day-monday">
+                    <span class="bc-day-tab__label" data-en="Mon" data-fr="Lun">Mon</span>
+                    <span class="bc-day-tab__theme" data-en="Who I Am" data-fr="Qui je suis">Who I Am</span>
+                </button>
+                <button class="bc-day-tab" data-day="tuesday" role="tab" aria-selected="false" aria-controls="day-tuesday">
+                    <span class="bc-day-tab__label" data-en="Tue" data-fr="Mar">Tue</span>
+                    <span class="bc-day-tab__theme" data-en="My Voice" data-fr="Ma voix">My Voice</span>
+                </button>
+                <button class="bc-day-tab" data-day="wednesday" role="tab" aria-selected="false" aria-controls="day-wednesday">
+                    <span class="bc-day-tab__label" data-en="Wed" data-fr="Mer">Wed</span>
+                    <span class="bc-day-tab__theme" data-en="My Skills" data-fr="Mes compétences">My Skills</span>
+                </button>
+                <button class="bc-day-tab" data-day="thursday" role="tab" aria-selected="false" aria-controls="day-thursday">
+                    <span class="bc-day-tab__label" data-en="Thu" data-fr="Jeu">Thu</span>
+                    <span class="bc-day-tab__theme" data-en="Community" data-fr="Communauté">Community</span>
+                </button>
+                <button class="bc-day-tab" data-day="friday" role="tab" aria-selected="false" aria-controls="day-friday">
+                    <span class="bc-day-tab__label" data-en="Fri" data-fr="Ven">Fri</span>
+                    <span class="bc-day-tab__theme" data-en="Others" data-fr="Les autres">Others</span>
+                </button>
+                <button class="bc-day-tab" data-day="saturday" role="tab" aria-selected="false" aria-controls="day-saturday">
+                    <span class="bc-day-tab__label" data-en="Sat" data-fr="Sam">Sat</span>
+                    <span class="bc-day-tab__theme" data-en="Solutions" data-fr="Solutions">Solutions</span>
+                </button>
+                <button class="bc-day-tab" data-day="sunday" role="tab" aria-selected="false" aria-controls="day-sunday">
+                    <span class="bc-day-tab__label" data-en="Sun" data-fr="Dim">Sun</span>
+                    <span class="bc-day-tab__theme" data-en="Change" data-fr="Changement">Change</span>
+                </button>
+            </div>
+
+            <!-- Day panels -->
+            <div class="bc-day-panels">
+
+                <!-- MONDAY -->
+                <div class="bc-day-panel active" id="day-monday" role="tabpanel">
+                    <div class="bc-day-panel__header">
+                        <h3 data-en="Monday" data-fr="Lundi">Monday</h3>
+                        <span class="bc-day-panel__theme-badge" data-en="Discovering Who I Am" data-fr="Découvrir qui je suis">Discovering Who I Am</span>
+                    </div>
+                    <div class="bc-sessions">
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Opening Ceremony" data-fr="Cérémonie d'ouverture">Opening Ceremony</h4>
+                                <p data-en="Participants share expectations, fears and hopes and establish a group agreement based on respect and trust."
+                                   data-fr="Les participants partagent leurs attentes, leurs craintes et leurs espoirs et établissent un accord de groupe basé sur le respect et la confiance.">
+                                    Participants share expectations, fears and hopes and establish a group agreement based on respect and trust.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Election of Camp Leadership" data-fr="Élection de la direction du camp">Election of Camp Leadership</h4>
+                                <p data-en="Participants elect camp representatives responsible for media, well-being, community and environmental initiatives."
+                                   data-fr="Les participants élisent des représentants du camp responsables des initiatives médiatiques, de bien-être, communautaires et environnementales.">
+                                    Participants elect camp representatives responsible for media, well-being, community and environmental initiatives.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Emotional Intelligence & Mental Health" data-fr="Intelligence émotionnelle et santé mentale">Emotional Intelligence & Mental Health</h4>
+                                <p data-en="Self-awareness, emotional regulation, resilience, mindfulness, yoga and reflection."
+                                   data-fr="Conscience de soi, régulation émotionnelle, résilience, pleine conscience, yoga et réflexion.">
+                                    Self-awareness, emotional regulation, resilience, mindfulness, yoga and reflection.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bc-deliverable">
+                        <span class="bc-deliverable__label" data-en="Deliverable" data-fr="Livrable">Deliverable</span>
+                        <span class="bc-deliverable__value" data-en="Personal Well-being Plan" data-fr="Plan de bien-être personnel">Personal Well-being Plan</span>
+                    </div>
+                </div>
+
+                <!-- TUESDAY -->
+                <div class="bc-day-panel" id="day-tuesday" role="tabpanel">
+                    <div class="bc-day-panel__header">
+                        <h3 data-en="Tuesday" data-fr="Mardi">Tuesday</h3>
+                        <span class="bc-day-panel__theme-badge" data-en="Finding My Voice" data-fr="Trouver ma voix">Finding My Voice</span>
+                    </div>
+                    <div class="bc-sessions">
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Public Speaking Intensive" data-fr="Intensif de prise de parole en public">Public Speaking Intensive</h4>
+                                <p data-en="Voice, posture, storytelling, confidence and persuasive communication."
+                                   data-fr="Voix, posture, narration, confiance et communication persuasive.">
+                                    Voice, posture, storytelling, confidence and persuasive communication.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Personal Branding" data-fr="Marque personnelle">Personal Branding</h4>
+                                <p data-en="Identity, leadership, reputation and professional communication."
+                                   data-fr="Identité, leadership, réputation et communication professionnelle.">
+                                    Identity, leadership, reputation and professional communication.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bc-deliverable">
+                        <span class="bc-deliverable__label" data-en="Deliverable" data-fr="Livrable">Deliverable</span>
+                        <span class="bc-deliverable__value" data-en="Personal Leadership Statement" data-fr="Déclaration de leadership personnel">Personal Leadership Statement</span>
+                    </div>
+                </div>
+
+                <!-- WEDNESDAY -->
+                <div class="bc-day-panel" id="day-wednesday" role="tabpanel">
+                    <div class="bc-day-panel__header">
+                        <h3 data-en="Wednesday" data-fr="Mercredi">Wednesday</h3>
+                        <span class="bc-day-panel__theme-badge" data-en="Building My Skills" data-fr="Développer mes compétences">Building My Skills</span>
+                    </div>
+                    <div class="bc-sessions">
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="AI and Digital Tools for Everyone" data-fr="IA et outils numériques pour tous">AI and Digital Tools for Everyone</h4>
+                                <p data-en="Introduction to AI, productivity tools, responsible technology use and digital citizenship."
+                                   data-fr="Introduction à l'IA, outils de productivité, utilisation responsable de la technologie et citoyenneté numérique.">
+                                    Introduction to AI, productivity tools, responsible technology use and digital citizenship.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Digital Content Creation" data-fr="Création de contenu numérique">Digital Content Creation</h4>
+                                <p data-en="Photography, social media, video creation and campaign design."
+                                   data-fr="Photographie, réseaux sociaux, création vidéo et conception de campagnes.">
+                                    Photography, social media, video creation and campaign design.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bc-deliverable">
+                        <span class="bc-deliverable__label" data-en="Deliverable" data-fr="Livrable">Deliverable</span>
+                        <span class="bc-deliverable__value" data-en="Campaign Prototype" data-fr="Prototype de campagne">Campaign Prototype</span>
+                    </div>
+                </div>
+
+                <!-- THURSDAY -->
+                <div class="bc-day-panel" id="day-thursday" role="tabpanel">
+                    <div class="bc-day-panel__header">
+                        <h3 data-en="Thursday" data-fr="Jeudi">Thursday</h3>
+                        <span class="bc-day-panel__theme-badge" data-en="Serving My Community" data-fr="Servir ma communauté">Serving My Community</span>
+                    </div>
+                    <div class="bc-sessions">
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Community Partner Presentation" data-fr="Présentation du partenaire communautaire">Community Partner Presentation</h4>
+                                <p data-en="Meet local organizations and learn how to collaborate for community impact."
+                                   data-fr="Rencontrez des organisations locales et apprenez à collaborer pour un impact communautaire.">
+                                    Meet local organizations and learn how to collaborate for community impact.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Volunteer Experience" data-fr="Expérience bénévole">Volunteer Experience</h4>
+                                <p data-en="Hands-on community service activity with a partner organization."
+                                   data-fr="Activité de service communautaire en partenariat avec une organisation partenaire.">
+                                    Hands-on community service activity with a partner organization.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Reflection Circle" data-fr="Cercle de réflexion">Reflection Circle</h4>
+                                <p data-en="Group debrief to process the day's experience and connect it to the final challenge."
+                                   data-fr="Débriefing de groupe pour traiter l'expérience de la journée et la relier au défi final.">
+                                    Group debrief to process the day's experience and connect it to the final challenge.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bc-deliverable">
+                        <span class="bc-deliverable__label" data-en="Deliverable" data-fr="Livrable">Deliverable</span>
+                        <span class="bc-deliverable__value" data-en="Community Impact Reflection" data-fr="Réflexion sur l'impact communautaire">Community Impact Reflection</span>
+                    </div>
+                </div>
+
+                <!-- FRIDAY -->
+                <div class="bc-day-panel" id="day-friday" role="tabpanel">
+                    <div class="bc-day-panel__header">
+                        <h3 data-en="Friday" data-fr="Vendredi">Friday</h3>
+                        <span class="bc-day-panel__theme-badge" data-en="Understanding Others" data-fr="Comprendre les autres">Understanding Others</span>
+                    </div>
+                    <div class="bc-sessions">
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Girls Leadership Space" data-fr="Espace de leadership féminin">Girls Leadership Space</h4>
+                                <p data-en="Confidence, leadership, ambition, safety and opportunities."
+                                   data-fr="Confiance, leadership, ambition, sécurité et opportunités.">
+                                    Confidence, leadership, ambition, safety and opportunities.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Boys Leadership Space" data-fr="Espace de leadership masculin">Boys Leadership Space</h4>
+                                <p data-en="Positive leadership, emotional intelligence, allyship and respect."
+                                   data-fr="Leadership positif, intelligence émotionnelle, solidarité et respect.">
+                                    Positive leadership, emotional intelligence, allyship and respect.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Mixed Dialogue Session" data-fr="Session de dialogue mixte">Mixed Dialogue Session</h4>
+                                <p data-en="Building mutual understanding and collaboration across groups."
+                                   data-fr="Construire la compréhension mutuelle et la collaboration entre les groupes.">
+                                    Building mutual understanding and collaboration across groups.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bc-deliverable">
+                        <span class="bc-deliverable__label" data-en="Deliverable" data-fr="Livrable">Deliverable</span>
+                        <span class="bc-deliverable__value" data-en="Shared Commitment Statement" data-fr="Déclaration d'engagement commun">Shared Commitment Statement</span>
+                    </div>
+                </div>
+
+                <!-- SATURDAY -->
+                <div class="bc-day-panel" id="day-saturday" role="tabpanel">
+                    <div class="bc-day-panel__header">
+                        <h3 data-en="Saturday" data-fr="Samedi">Saturday</h3>
+                        <span class="bc-day-panel__theme-badge" data-en="Designing Solutions" data-fr="Concevoir des solutions">Designing Solutions</span>
+                    </div>
+                    <div class="bc-sessions">
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Social Innovation and Design Thinking" data-fr="Innovation sociale et design thinking">Social Innovation and Design Thinking</h4>
+                                <p data-en="Frameworks and methods for designing solutions that create real impact."
+                                   data-fr="Cadres et méthodes pour concevoir des solutions à impact réel.">
+                                    Frameworks and methods for designing solutions that create real impact.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Project Production" data-fr="Production du projet">Project Production</h4>
+                                <p data-en="Teams work intensively to build, produce, and finalize their final challenge project."
+                                   data-fr="Les équipes travaillent intensivement pour construire, produire et finaliser leur projet de défi final.">
+                                    Teams work intensively to build, produce, and finalize their final challenge project.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Coaching and Mentorship" data-fr="Coaching et mentorat">Coaching and Mentorship</h4>
+                                <p data-en="One-on-one and group sessions with mentors to sharpen the final project."
+                                   data-fr="Sessions individuelles et en groupe avec des mentors pour affiner le projet final.">
+                                    One-on-one and group sessions with mentors to sharpen the final project.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bc-deliverable">
+                        <span class="bc-deliverable__label" data-en="Deliverable" data-fr="Livrable">Deliverable</span>
+                        <span class="bc-deliverable__value" data-en="Final Project" data-fr="Projet final">Final Project</span>
+                    </div>
+                </div>
+
+                <!-- SUNDAY -->
+                <div class="bc-day-panel" id="day-sunday" role="tabpanel">
+                    <div class="bc-day-panel__header">
+                        <h3 data-en="Sunday" data-fr="Dimanche">Sunday</h3>
+                        <span class="bc-day-panel__theme-badge" data-en="Inspiring Change" data-fr="Inspirer le changement">Inspiring Change</span>
+                    </div>
+                    <div class="bc-sessions">
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Leadership Panel" data-fr="Panel de leadership">Leadership Panel</h4>
+                                <p data-en="Inspiring conversations with leaders, mentors, and change-makers from Niger and beyond."
+                                   data-fr="Des conversations inspirantes avec des leaders, des mentors et des acteurs du changement du Niger et d'ailleurs.">
+                                    Inspiring conversations with leaders, mentors, and change-makers from Niger and beyond.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Final Presentations" data-fr="Présentations finales">Final Presentations</h4>
+                                <p data-en="Every team presents their project to the panel of judges and the full bootcamp community."
+                                   data-fr="Chaque équipe présente son projet au jury et à toute la communauté du bootcamp.">
+                                    Every team presents their project to the panel of judges and the full bootcamp community.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bc-session">
+                            <div class="bc-session__dot"></div>
+                            <div class="bc-session__body">
+                                <h4 data-en="Award Ceremony & Certificate Distribution" data-fr="Cérémonie de remise des prix et des certificats">Award Ceremony & Certificate Distribution</h4>
+                                <p data-en="Celebrating the achievement of every participant and recognizing outstanding projects."
+                                   data-fr="Célébrer la réussite de chaque participant et reconnaître les projets exceptionnels.">
+                                    Celebrating the achievement of every participant and recognizing outstanding projects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bc-deliverable">
+                        <span class="bc-deliverable__label" data-en="Deliverable" data-fr="Livrable">Deliverable</span>
+                        <span class="bc-deliverable__value" data-en="Project Presentation" data-fr="Présentation du projet">Project Presentation</span>
+                    </div>
+                </div>
+
+            </div><!-- /bc-day-panels -->
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- JOUR 7 -->
-  <div class="day-block">
-    <div class="day-header">
-      <div class="day-badge"><span class="j">Jour</span><span class="num">7</span></div>
-      <div class="day-meta">
-        <h2>Cérémonie de clôture</h2>
-        <span class="day-weekday">Dimanche</span>
-      </div>
-    </div>
-    <div class="sessions">
-      <div class="session">
-        <div class="session-time">8h00 – 13h00</div>
-        <div class="session-body">
-          <div class="session-name">Panel, présentations artistiques & remise des prix</div>
-          <div class="session-desc">La grande journée de célébration en quatre temps : un panel avec des intervenant·e·s inspirant·e·s ouvre la matinée, suivi des présentations artistiques et slams des équipes devant un jury et le public. L'annonce des gagnant·e·s du concours de campagnes précède la remise solennelle des attestations et des prix à chaque participant·e.</div>
-          <div class="session-tags">
-            <span class="tag">Panel invité·e·s</span>
-            <span class="tag">Performances artistiques</span>
-            <span class="tag">Annonce des gagnant·e·s</span>
-            <span class="tag">Attestations & prix</span>
-          </div>
+    <!-- ===== SECTION 6: RESOURCES & LOGISTICS ===== -->
+    <section class="bc-logistics" id="bc-logistics">
+        <div class="container">
+            <h2 class="section-title fade-in"
+                data-en="Resources & Logistics"
+                data-fr="Ressources et logistique">
+                Resources & Logistics
+            </h2>
+            <div class="bc-logistics__grid">
+
+                <div class="bc-logistics-card fade-in">
+                    <div class="bc-logistics-card__icon">📍</div>
+                    <h4 data-en="Venue" data-fr="Lieu">Venue</h4>
+                    <p data-en="Location details to be confirmed. The bootcamp will be held at a youth-friendly venue in Niamey, Niger."
+                       data-fr="Les détails du lieu seront confirmés. Le bootcamp se tiendra dans un lieu adapté aux jeunes à Niamey, Niger.">
+                        Location details to be confirmed. The bootcamp will be held at a youth-friendly venue in Niamey, Niger.
+                    </p>
+                </div>
+
+                <div class="bc-logistics-card fade-in">
+                    <div class="bc-logistics-card__icon">🏠</div>
+                    <h4 data-en="Accommodation" data-fr="Hébergement">Accommodation</h4>
+                    <p data-en="Accommodation will be provided for participants traveling from outside Niamey. Details will be shared upon registration confirmation."
+                       data-fr="L'hébergement sera fourni aux participants venant de l'extérieur de Niamey. Les détails seront partagés lors de la confirmation d'inscription.">
+                        Accommodation will be provided for participants traveling from outside Niamey. Details will be shared upon registration confirmation.
+                    </p>
+                </div>
+
+                <div class="bc-logistics-card fade-in">
+                    <div class="bc-logistics-card__icon">🎒</div>
+                    <h4 data-en="What to Bring" data-fr="Quoi apporter">What to Bring</h4>
+                    <p data-en="Notebook, pen, a photo ID, comfortable clothing, a water bottle, and your enthusiasm. Laptops are welcome but not required."
+                       data-fr="Cahier, stylo, une pièce d'identité, des vêtements confortables, une bouteille d'eau et votre enthousiasme. Les ordinateurs portables sont les bienvenus mais non obligatoires.">
+                        Notebook, pen, a photo ID, comfortable clothing, a water bottle, and your enthusiasm. Laptops are welcome but not required.
+                    </p>
+                </div>
+
+                <div class="bc-logistics-card fade-in">
+                    <div class="bc-logistics-card__icon">📋</div>
+                    <h4 data-en="Code of Conduct" data-fr="Code de conduite">Code of Conduct</h4>
+                    <p data-en="All participants agree to treat each other with respect, maintain confidentiality, and uphold the values of inclusion and non-violence throughout the bootcamp."
+                       data-fr="Tous les participants s'engagent à se traiter mutuellement avec respect, à maintenir la confidentialité et à défendre les valeurs d'inclusion et de non-violence tout au long du bootcamp.">
+                        All participants agree to treat each other with respect, maintain confidentiality, and uphold the values of inclusion and non-violence throughout the bootcamp.
+                    </p>
+                </div>
+
+                <div class="bc-logistics-card fade-in">
+                    <div class="bc-logistics-card__icon">🚨</div>
+                    <h4 data-en="Emergency Contacts" data-fr="Contacts d'urgence">Emergency Contacts</h4>
+                    <p data-en="Emergency contact information will be shared with all registered participants prior to the bootcamp. A Relvox team member will be available at all times."
+                       data-fr="Les informations de contact d'urgence seront partagées avec tous les participants inscrits avant le bootcamp. Un membre de l'équipe Relvox sera disponible en permanence.">
+                        Emergency contact information will be shared with all registered participants prior to the bootcamp. A Relvox team member will be available at all times.
+                    </p>
+                </div>
+
+                <div class="bc-logistics-card fade-in">
+                    <div class="bc-logistics-card__icon">🚌</div>
+                    <h4 data-en="Transportation" data-fr="Transport">Transportation</h4>
+                    <p data-en="Shared transportation may be arranged for groups coming from certain areas. Reach out to the Relvox team after registering to discuss options."
+                       data-fr="Un transport commun peut être organisé pour les groupes venant de certaines zones. Contactez l'équipe Relvox après votre inscription pour discuter des options.">
+                        Shared transportation may be arranged for groups coming from certain areas. Reach out to the Relvox team after registering to discuss options.
+                    </p>
+                </div>
+
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-</main>
+    <!-- ===== SECTION 7: FAQ ===== -->
+    <section class="bc-faq" id="bc-faq">
+        <div class="container">
+            <h2 class="section-title fade-in"
+                data-en="Frequently Asked Questions"
+                data-fr="Questions fréquemment posées">
+                Questions fréquemment posées
+            </h2>
 
-<footer>
-  Art & Tech au service de l'impact &nbsp;·&nbsp; Programme provisoire — sujet à modifications
-</footer>
+            <!-- Outer wrapper: click to reveal all questions -->
+            <div class="bc-faq__wrapper fade-in">
+                <button class="bc-faq__toggle" aria-expanded="false" aria-controls="bc-faq-inner">
+                    <span class="bc-faq__toggle-text">
+                        <span class="bc-faq__toggle-icon" aria-hidden="true">💬</span>
+                        <span data-en="See all questions" data-fr="Voir toutes les questions">Voir toutes les questions</span>
+                    </span>
+                    <span class="bc-faq__toggle-arrow" aria-hidden="true">↓</span>
+                </button>
 
+                <!-- Inner list: hidden until wrapper is opened -->
+                <div class="bc-faq__inner" id="bc-faq-inner" hidden>
+                    <div class="bc-faq__list">
+
+                        <div class="bc-faq-item">
+                            <button class="bc-faq-item__question" aria-expanded="false">
+                                <span data-en="Do I need a laptop?" data-fr="Ai-je besoin d'un ordinateur portable ?">Ai-je besoin d'un ordinateur portable ?</span>
+                                <span class="bc-faq-item__arrow" aria-hidden="true">↓</span>
+                            </button>
+                            <div class="bc-faq-item__answer" hidden>
+                                <p data-en="No, a laptop is not required. Relvox will provide access to shared devices for sessions that need them. If you have your own laptop, feel free to bring it."
+                                   data-fr="Non, un ordinateur portable n'est pas obligatoire. Relvox fournira l'accès à des appareils partagés pour les sessions qui en ont besoin. Si vous avez votre propre ordinateur portable, vous pouvez l'apporter.">
+                                    Non, un ordinateur portable n'est pas obligatoire. Relvox fournira l'accès à des appareils partagés pour les sessions qui en ont besoin. Si vous avez votre propre ordinateur portable, vous pouvez l'apporter.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bc-faq-item">
+                            <button class="bc-faq-item__question" aria-expanded="false">
+                                <span data-en="Is accommodation provided?" data-fr="L'hébergement est-il fourni ?">L'hébergement est-il fourni ?</span>
+                                <span class="bc-faq-item__arrow" aria-hidden="true">↓</span>
+                            </button>
+                            <div class="bc-faq-item__answer" hidden>
+                                <p data-en="Accommodation is provided for participants who need to travel to the bootcamp venue. Participants attending locally are welcome to commute daily. Please indicate your needs in the registration form."
+                                   data-fr="L'hébergement est fourni aux participants qui doivent se déplacer pour rejoindre le lieu du bootcamp. Les participants locaux peuvent se déplacer quotidiennement. Veuillez indiquer vos besoins dans le formulaire d'inscription.">
+                                    L'hébergement est fourni aux participants qui doivent se déplacer pour rejoindre le lieu du bootcamp. Les participants locaux peuvent se déplacer quotidiennement. Veuillez indiquer vos besoins dans le formulaire d'inscription.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bc-faq-item">
+                            <button class="bc-faq-item__question" aria-expanded="false">
+                                <span data-en="What should I bring?" data-fr="Que dois-je apporter ?">Que dois-je apporter ?</span>
+                                <span class="bc-faq-item__arrow" aria-hidden="true">↓</span>
+                            </button>
+                            <div class="bc-faq-item__answer" hidden>
+                                <p data-en="Bring a notebook, pen, photo ID, comfortable clothing for a full week of activities, a reusable water bottle, and anything that helps you feel comfortable and creative. Laptops and phones are welcome."
+                                   data-fr="Apportez un cahier, un stylo, une pièce d'identité, des vêtements confortables pour une semaine complète d'activités, une bouteille d'eau réutilisable et tout ce qui vous aide à vous sentir à l'aise et créatif. Les ordinateurs portables et les téléphones sont les bienvenus.">
+                                    Apportez un cahier, un stylo, une pièce d'identité, des vêtements confortables pour une semaine complète d'activités, une bouteille d'eau réutilisable et tout ce qui vous aide à vous sentir à l'aise et créatif. Les ordinateurs portables et les téléphones sont les bienvenus.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bc-faq-item">
+                            <button class="bc-faq-item__question" aria-expanded="false">
+                                <span data-en="Will I receive a certificate?" data-fr="Vais-je recevoir un certificat ?">Vais-je recevoir un certificat ?</span>
+                                <span class="bc-faq-item__arrow" aria-hidden="true">↓</span>
+                            </button>
+                            <div class="bc-faq-item__answer" hidden>
+                                <p data-en="Yes! Every participant who completes the bootcamp receives an official Relvox Leadership Bootcamp 2026 certificate at the Sunday award ceremony."
+                                   data-fr="Oui ! Chaque participant qui termine le bootcamp reçoit un certificat officiel Relvox Leadership Bootcamp 2026 lors de la cérémonie de remise des prix du dimanche.">
+                                    Oui ! Chaque participant qui termine le bootcamp reçoit un certificat officiel Relvox Leadership Bootcamp 2026 lors de la cérémonie de remise des prix du dimanche.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bc-faq-item">
+                            <button class="bc-faq-item__question" aria-expanded="false">
+                                <span data-en="Can beginners apply?" data-fr="Les débutants peuvent-ils postuler ?">Les débutants peuvent-ils postuler ?</span>
+                                <span class="bc-faq-item__arrow" aria-hidden="true">↓</span>
+                            </button>
+                            <div class="bc-faq-item__answer" hidden>
+                                <p data-en="Absolutely. The bootcamp is designed for all levels, from young people attending their first leadership program to those with more experience. Everyone is welcome."
+                                   data-fr="Absolument. Le bootcamp est conçu pour tous les niveaux, des jeunes participant à leur premier programme de leadership à ceux ayant plus d'expérience. Tout le monde est le bienvenu.">
+                                    Absolument. Le bootcamp est conçu pour tous les niveaux, des jeunes participant à leur premier programme de leadership à ceux ayant plus d'expérience. Tout le monde est le bienvenu.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bc-faq-item">
+                            <button class="bc-faq-item__question" aria-expanded="false">
+                                <span data-en="What language will the camp be conducted in?" data-fr="Dans quelle langue le camp se déroulera-t-il ?">Dans quelle langue le camp se déroulera-t-il ?</span>
+                                <span class="bc-faq-item__arrow" aria-hidden="true">↓</span>
+                            </button>
+                            <div class="bc-faq-item__answer" hidden>
+                                <p data-en="The bootcamp will be conducted primarily in French, with support in Hausa and other local languages as needed. Written materials will also be available in English."
+                                   data-fr="Le bootcamp se déroulera principalement en français, avec un soutien en haoussa et d'autres langues locales si nécessaire. Les documents écrits seront également disponibles en anglais.">
+                                    Le bootcamp se déroulera principalement en français, avec un soutien en haoussa et d'autres langues locales si nécessaire. Les documents écrits seront également disponibles en anglais.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bc-faq-item">
+                            <button class="bc-faq-item__question" aria-expanded="false">
+                                <span data-en="Can I participate if I have never done leadership activities before?" data-fr="Puis-je participer si je n'ai jamais fait d'activités de leadership auparavant ?">Puis-je participer si je n'ai jamais fait d'activités de leadership auparavant ?</span>
+                                <span class="bc-faq-item__arrow" aria-hidden="true">↓</span>
+                            </button>
+                            <div class="bc-faq-item__answer" hidden>
+                                <p data-en="Yes, and we especially encourage you to apply. Relvox Bootcamp is designed to be a starting point for young leaders. Our facilitators meet you exactly where you are."
+                                   data-fr="Oui, et nous vous encourageons particulièrement à postuler. Le Bootcamp Relvox est conçu pour être un point de départ pour les jeunes leaders. Nos facilitateurs vous accompagnent là où vous en êtes.">
+                                    Oui, et nous vous encourageons particulièrement à postuler. Le Bootcamp Relvox est conçu pour être un point de départ pour les jeunes leaders. Nos facilitateurs vous accompagnent là où vous en êtes.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div><!-- /bc-faq__list -->
+                </div><!-- /bc-faq__inner -->
+            </div><!-- /bc-faq__wrapper -->
+
+        </div>
+    </section>
+
+    <!-- ===== SECTION 8: REGISTRATION CTA ===== -->
+    <section class="bc-register" id="bc-register">
+        <div class="bc-register__bg" aria-hidden="true">
+            <span class="shape shape--circle shape--4"></span>
+            <span class="shape shape--circle shape--5"></span>
+        </div>
+        <div class="container bc-register__inner fade-in">
+            <h2 data-en="Ready to Become a Leader of Change?"
+                data-fr="Prêt·e à devenir un leader du changement ?">
+                Ready to Become a Leader of Change?
+            </h2>
+            <p data-en="Applications for Relvox Leadership Bootcamp 2026 are now open. Limited spots available."
+               data-fr="Les candidatures pour le Bootcamp Leadership Relvox 2026 sont désormais ouvertes. Places limitées.">
+                Applications for Relvox Leadership Bootcamp 2026 are now open. Limited spots available.
+            </p>
+            <!-- Replace href with your application form URL when ready -->
+            <a href="#" class="bc-btn bc-btn--primary bc-btn--large"
+               data-en="Apply Now"
+               data-fr="Postuler maintenant">
+                Apply Now
+            </a>
+            <p class="bc-register__note"
+               data-en="Questions? Contact us at contact@relvox.org"
+               data-fr="Des questions ? Contactez-nous à contact@relvox.org">
+                Questions? Contact us at contact@relvox.org
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p data-en="© 2026 Relvox. All rights reserved." data-fr="© 2026 Relvox. Tous droits réservés.">
+                © 2026 Relvox. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="bootcamp.js"></script>
 </body>
 </html>
