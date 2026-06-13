@@ -1,9 +1,16 @@
 /* ============================================================
    bootcamp.css — Relvox Bootcamp 2026
-   Add this file alongside style.css.
    All bootcamp styles use the bc- prefix to avoid conflicts.
    ============================================================ */
- 
+
+/* ── Nav logo: compact to match existing site header ── */
+.bc-nav-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
 /* ── Tokens ── */
 :root {
     --bc-pink:      #ec4899;
@@ -20,7 +27,7 @@
     --bc-shadow-lg: 0 20px 50px rgba(0,0,0,0.13);
     --bc-trans:     0.3s ease;
 }
- 
+
 /* ── Shared section spacing ── */
 .bc-hero,
 .bc-about,
@@ -32,7 +39,7 @@
 .bc-register {
     padding: 100px 0;
 }
- 
+
 /* ============================================================
    HERO
    ============================================================ */
@@ -45,10 +52,10 @@
     overflow: hidden;
     padding-top: 80px; /* clear fixed header */
 }
- 
+
 /* Decorative background shapes */
 .bc-hero__bg-shapes { pointer-events: none; }
- 
+
 .shape {
     position: absolute;
     border-radius: 50%;
@@ -73,7 +80,7 @@
     background-image: radial-gradient(circle, rgba(236,72,153,0.12) 1.5px, transparent 1.5px);
     background-size: 20px 20px;
 }
- 
+
 .bc-hero__inner {
     position: relative;
     z-index: 2;
@@ -81,7 +88,7 @@
     max-width: 780px;
     margin: 0 auto;
 }
- 
+
 .bc-hero__eyebrow {
     display: inline-block;
     font-size: 0.8rem;
@@ -95,7 +102,7 @@
     padding: 6px 18px;
     margin-bottom: 1.2rem;
 }
- 
+
 .bc-hero__title {
     font-size: clamp(2.2rem, 6vw, 4.2rem);
     font-weight: 800;
@@ -106,7 +113,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
- 
+
 .bc-hero__theme {
     font-size: clamp(1rem, 2.5vw, 1.35rem);
     font-weight: 600;
@@ -114,7 +121,7 @@
     margin-bottom: 1.2rem;
     font-style: italic;
 }
- 
+
 .bc-hero__desc {
     font-size: 1.1rem;
     color: var(--bc-mid);
@@ -122,7 +129,7 @@
     margin: 0 auto 2.4rem;
     line-height: 1.7;
 }
- 
+
 /* Scroll hint */
 .bc-hero__scroll-hint {
     position: absolute;
@@ -143,7 +150,7 @@
     0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
     50%       { opacity: 1;   transform: scaleY(1);   }
 }
- 
+
 /* ============================================================
    BUTTONS
    ============================================================ */
@@ -171,7 +178,7 @@
     padding: 18px 48px;
     font-size: 1.15rem;
 }
- 
+
 /* ============================================================
    ABOUT
    ============================================================ */
@@ -219,7 +226,7 @@
     color: var(--bc-mid);
     line-height: 1.6;
 }
- 
+
 /* ============================================================
    FINAL CHALLENGE
    ============================================================ */
@@ -251,7 +258,7 @@
     padding-bottom: 0.6rem;
     border-bottom: 2px solid var(--bc-pink-soft);
 }
- 
+
 /* Format list */
 .bc-format-list {
     list-style: none;
@@ -274,7 +281,7 @@
 .bc-format-list li:hover {
     background: #fce7f3;
 }
- 
+
 /* Criteria bars */
 .bc-criteria {
     display: flex;
@@ -307,7 +314,7 @@
 .bc-criteria__fill.animated {
     width: var(--pct);
 }
- 
+
 /* ============================================================
    CHALLENGE THEMES
    ============================================================ */
@@ -356,7 +363,7 @@
     color: var(--bc-mid);
     line-height: 1.55;
 }
- 
+
 /* ============================================================
    INTERACTIVE SCHEDULE
    ============================================================ */
@@ -370,7 +377,7 @@
     max-width: 500px;
     margin: -1.5rem auto 2.5rem;
 }
- 
+
 /* Tab buttons row */
 .bc-day-tabs {
     display: flex;
@@ -415,7 +422,7 @@
 .bc-day-tab.active .bc-day-tab__theme {
     opacity: 0.9;
 }
- 
+
 /* Panel container */
 .bc-day-panels {
     position: relative;
@@ -435,7 +442,7 @@
     from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: translateY(0); }
 }
- 
+
 .bc-day-panel__header {
     display: flex;
     align-items: center;
@@ -459,7 +466,7 @@
     padding: 5px 14px;
     border-radius: 50px;
 }
- 
+
 /* Sessions */
 .bc-sessions {
     display: flex;
@@ -500,7 +507,7 @@
     color: var(--bc-mid);
     line-height: 1.6;
 }
- 
+
 /* Deliverable badge */
 .bc-deliverable {
     display: inline-flex;
@@ -523,7 +530,7 @@
     color: var(--bc-dark);
     font-weight: 600;
 }
- 
+
 /* ============================================================
    LOGISTICS
    ============================================================ */
@@ -563,19 +570,84 @@
     color: var(--bc-mid);
     line-height: 1.65;
 }
- 
+
 /* ============================================================
    FAQ
    ============================================================ */
 .bc-faq {
     background: var(--bc-white);
 }
-.bc-faq__list {
+
+/* Outer wrapper card */
+.bc-faq__wrapper {
     max-width: 720px;
     margin: 0 auto;
+    border: 2px solid var(--bc-border);
+    border-radius: var(--bc-radius);
+    overflow: hidden;
+    transition: border-color var(--bc-trans);
+}
+.bc-faq__wrapper:has(.bc-faq__toggle[aria-expanded="true"]) {
+    border-color: var(--bc-pink);
+}
+
+/* Big outer toggle button */
+.bc-faq__toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.4rem 1.8rem;
+    background: var(--bc-light);
+    border: none;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--bc-dark);
+    text-align: left;
+    transition: background var(--bc-trans), color var(--bc-trans);
+}
+.bc-faq__toggle:hover {
+    background: #fce7f3;
+    color: var(--bc-pink);
+}
+.bc-faq__toggle[aria-expanded="true"] {
+    background: linear-gradient(135deg, var(--bc-pink) 0%, var(--bc-purple) 100%);
+    color: var(--bc-white);
+}
+.bc-faq__toggle-text {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.bc-faq__toggle-icon {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+.bc-faq__toggle-arrow {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: transform var(--bc-trans);
+}
+.bc-faq__toggle[aria-expanded="true"] .bc-faq__toggle-arrow {
+    transform: rotate(180deg);
+}
+
+/* Inner container revealed on open */
+.bc-faq__inner {
+    border-top: 1px solid var(--bc-border);
+    padding: 1.2rem 1.2rem 0.4rem;
+    background: var(--bc-white);
+}
+.bc-faq__inner[hidden] { display: none; }
+
+/* List of questions inside */
+.bc-faq__list {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.6rem;
 }
 .bc-faq-item {
     border: 1.5px solid var(--bc-border);
@@ -632,7 +704,7 @@
     padding-top: 0.6rem;
     border-top: 1px solid var(--bc-border);
 }
- 
+
 /* ============================================================
    REGISTRATION CTA
    ============================================================ */
@@ -678,7 +750,7 @@
 .bc-register .bc-btn--primary {
     background: linear-gradient(135deg, var(--bc-pink) 0%, #a855f7 100%);
 }
- 
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -692,7 +764,7 @@
     .bc-faq,
     .bc-register { padding: 70px 0; }
 }
- 
+
 @media (max-width: 600px) {
     .bc-day-tab { min-width: 60px; padding: 10px 12px; }
     .bc-day-tab__theme { display: none; }
