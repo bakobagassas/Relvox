@@ -635,3 +635,96 @@
             object-fit: cover;
             border-radius: 10px;
         }
+
+        /* ============================================
+   MOBILE NAV FIX 
+   ============================================ */
+
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #4a5568;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+    /* Animate into X when open */
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    @media (max-width: 768px) {
+
+        /* show hamburger */
+        .hamburger {
+            display: flex;
+        }
+
+        /* nav row: logo on left, hamburger on right */
+        nav.container {
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        /* hide the links + language switch by default */
+        .nav-center {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+            background: rgba(248, 249, 250, 0.98);
+            border-top: 1px solid #e2e8f0;
+            padding: 1rem 0 1.25rem;
+            margin-top: 0.5rem;
+        }
+
+        /* slide open when active */
+        .nav-center.open {
+            display: flex;
+        }
+
+        .nav-links {
+            display: flex !important;
+            flex-direction: column;
+            gap: 0;
+            width: 100%;
+        }
+
+        .nav-links li a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            font-size: 1rem;
+            color: #2d3748;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        .nav-links li:last-child a {
+            border-bottom: none;
+        }
+
+        .language-switch {
+            margin: 0.75rem 1.25rem 0;
+        }
+    }
