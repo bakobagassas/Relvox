@@ -1,0 +1,702 @@
+/* ============================================================
+   bootcamp.css — Relvox Bootcamp 2026
+   Add this file alongside style.css.
+   All bootcamp styles use the bc- prefix to avoid conflicts.
+   ============================================================ */
+ 
+/* ── Tokens ── */
+:root {
+    --bc-pink:      #ec4899;
+    --bc-pink-soft: #fbb6ce;
+    --bc-purple:    #7c3aed;
+    --bc-dark:      #1a202c;
+    --bc-mid:       #4a5568;
+    --bc-light:     #f7fafc;
+    --bc-white:     #ffffff;
+    --bc-border:    #e2e8f0;
+    --bc-radius:    16px;
+    --bc-radius-sm: 10px;
+    --bc-shadow:    0 10px 30px rgba(0,0,0,0.08);
+    --bc-shadow-lg: 0 20px 50px rgba(0,0,0,0.13);
+    --bc-trans:     0.3s ease;
+}
+ 
+/* ── Shared section spacing ── */
+.bc-hero,
+.bc-about,
+.bc-challenge,
+.bc-themes,
+.bc-schedule,
+.bc-logistics,
+.bc-faq,
+.bc-register {
+    padding: 100px 0;
+}
+ 
+/* ============================================================
+   HERO
+   ============================================================ */
+.bc-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 40%, #fde8f1 100%);
+    overflow: hidden;
+    padding-top: 80px; /* clear fixed header */
+}
+ 
+/* Decorative background shapes */
+.bc-hero__bg-shapes { pointer-events: none; }
+ 
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.12;
+}
+.shape--circle    { background: var(--bc-pink); }
+.shape--1 { width: 500px; height: 500px; top: -150px; right: -150px; }
+.shape--2 { width: 300px; height: 300px; bottom: -80px; left: -80px; background: var(--bc-purple); }
+.shape--pill {
+    width: 180px; height: 80px;
+    border-radius: 50px;
+    background: var(--bc-pink);
+    top: 60%; left: 55%;
+    opacity: 0.08;
+    transform: rotate(-20deg);
+}
+.shape--dot-grid {
+    width: 260px; height: 260px;
+    border-radius: 0;
+    opacity: 1;
+    top: 10%; left: 2%;
+    background-image: radial-gradient(circle, rgba(236,72,153,0.12) 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+}
+ 
+.bc-hero__inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto;
+}
+ 
+.bc-hero__eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bc-pink);
+    background: rgba(236,72,153,0.08);
+    border: 1px solid rgba(236,72,153,0.2);
+    border-radius: 50px;
+    padding: 6px 18px;
+    margin-bottom: 1.2rem;
+}
+ 
+.bc-hero__title {
+    font-size: clamp(2.2rem, 6vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--bc-dark) 0%, #6b21a8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+ 
+.bc-hero__theme {
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    font-weight: 600;
+    color: var(--bc-purple);
+    margin-bottom: 1.2rem;
+    font-style: italic;
+}
+ 
+.bc-hero__desc {
+    font-size: 1.1rem;
+    color: var(--bc-mid);
+    max-width: 600px;
+    margin: 0 auto 2.4rem;
+    line-height: 1.7;
+}
+ 
+/* Scroll hint */
+.bc-hero__scroll-hint {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.bc-hero__scroll-hint span {
+    display: block;
+    width: 2px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--bc-pink), transparent);
+    margin: 0 auto;
+    animation: scrollPulse 1.8s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
+    50%       { opacity: 1;   transform: scaleY(1);   }
+}
+ 
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.bc-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all var(--bc-trans);
+    cursor: pointer;
+    border: none;
+}
+.bc-btn--primary {
+    background: linear-gradient(135deg, var(--bc-pink) 0%, var(--bc-purple) 100%);
+    color: var(--bc-white);
+    box-shadow: 0 8px 24px rgba(236,72,153,0.3);
+}
+.bc-btn--primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.45);
+}
+.bc-btn--large {
+    padding: 18px 48px;
+    font-size: 1.15rem;
+}
+ 
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.bc-about {
+    background: var(--bc-light);
+}
+.bc-about__intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--bc-mid);
+    max-width: 680px;
+    margin: -1.5rem auto 3rem;
+    line-height: 1.7;
+}
+.bc-about__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.bc-skill-card {
+    background: var(--bc-white);
+    border-radius: var(--bc-radius);
+    padding: 2rem;
+    box-shadow: var(--bc-shadow);
+    border: 2px solid transparent;
+    transition: all var(--bc-trans);
+}
+.bc-skill-card:hover {
+    border-color: var(--bc-pink);
+    transform: translateY(-6px);
+    box-shadow: var(--bc-shadow-lg);
+}
+.bc-skill-card__icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.bc-skill-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--bc-dark);
+    margin-bottom: 0.6rem;
+}
+.bc-skill-card p {
+    font-size: 0.95rem;
+    color: var(--bc-mid);
+    line-height: 1.6;
+}
+ 
+/* ============================================================
+   FINAL CHALLENGE
+   ============================================================ */
+.bc-challenge {
+    background: var(--bc-white);
+}
+.bc-challenge__desc {
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--bc-mid);
+    max-width: 700px;
+    margin: -1.5rem auto 3rem;
+    line-height: 1.7;
+}
+.bc-challenge__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+@media (max-width: 768px) {
+    .bc-challenge__columns { grid-template-columns: 1fr; }
+}
+.bc-challenge__col-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--bc-dark);
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--bc-pink-soft);
+}
+ 
+/* Format list */
+.bc-format-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.bc-format-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1rem;
+    color: var(--bc-mid);
+    background: var(--bc-light);
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--bc-radius-sm);
+    border-left: 3px solid var(--bc-pink);
+    transition: background var(--bc-trans);
+}
+.bc-format-list li:hover {
+    background: #fce7f3;
+}
+ 
+/* Criteria bars */
+.bc-criteria {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.bc-criteria__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+.bc-criteria__label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--bc-dark);
+}
+.bc-criteria__bar {
+    height: 10px;
+    background: var(--bc-border);
+    border-radius: 50px;
+    overflow: hidden;
+}
+.bc-criteria__fill {
+    height: 100%;
+    width: 0;
+    border-radius: 50px;
+    background: linear-gradient(90deg, var(--bc-pink), var(--bc-purple));
+    transition: width 1.2s cubic-bezier(.4,0,.2,1);
+}
+.bc-criteria__fill.animated {
+    width: var(--pct);
+}
+ 
+/* ============================================================
+   CHALLENGE THEMES
+   ============================================================ */
+.bc-themes {
+    background: linear-gradient(135deg, #fdf4ff 0%, #f0f4ff 100%);
+}
+.bc-themes__intro {
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--bc-mid);
+    max-width: 520px;
+    margin: -1.5rem auto 3rem;
+}
+.bc-themes__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+}
+.bc-theme-card {
+    background: var(--bc-white);
+    border-radius: var(--bc-radius);
+    padding: 1.5rem;
+    box-shadow: var(--bc-shadow);
+    border: 2px solid transparent;
+    transition: all var(--bc-trans);
+    cursor: default;
+}
+.bc-theme-card:hover {
+    border-color: var(--bc-purple);
+    transform: translateY(-5px);
+    box-shadow: var(--bc-shadow-lg);
+}
+.bc-theme-card__icon {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.7rem;
+}
+.bc-theme-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--bc-dark);
+    margin-bottom: 0.5rem;
+}
+.bc-theme-card p {
+    font-size: 0.88rem;
+    color: var(--bc-mid);
+    line-height: 1.55;
+}
+ 
+/* ============================================================
+   INTERACTIVE SCHEDULE
+   ============================================================ */
+.bc-schedule {
+    background: var(--bc-white);
+}
+.bc-schedule__intro {
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--bc-mid);
+    max-width: 500px;
+    margin: -1.5rem auto 2.5rem;
+}
+ 
+/* Tab buttons row */
+.bc-day-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.bc-day-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 20px;
+    border: 2px solid var(--bc-border);
+    border-radius: var(--bc-radius-sm);
+    background: var(--bc-light);
+    cursor: pointer;
+    transition: all var(--bc-trans);
+    min-width: 80px;
+}
+.bc-day-tab:hover {
+    border-color: var(--bc-pink);
+    background: #fce7f3;
+}
+.bc-day-tab.active {
+    background: linear-gradient(135deg, var(--bc-pink) 0%, var(--bc-purple) 100%);
+    border-color: transparent;
+    color: var(--bc-white);
+    box-shadow: 0 6px 20px rgba(236,72,153,0.35);
+}
+.bc-day-tab__label {
+    font-weight: 800;
+    font-size: 1rem;
+}
+.bc-day-tab__theme {
+    font-size: 0.72rem;
+    font-weight: 500;
+    opacity: 0.75;
+    white-space: nowrap;
+}
+.bc-day-tab.active .bc-day-tab__theme {
+    opacity: 0.9;
+}
+ 
+/* Panel container */
+.bc-day-panels {
+    position: relative;
+}
+.bc-day-panel {
+    display: none;
+    background: var(--bc-light);
+    border-radius: var(--bc-radius);
+    padding: 2.5rem;
+    animation: panelFadeIn 0.35s ease;
+    border: 1px solid var(--bc-border);
+}
+.bc-day-panel.active {
+    display: block;
+}
+@keyframes panelFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+ 
+.bc-day-panel__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--bc-border);
+}
+.bc-day-panel__header h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--bc-dark);
+}
+.bc-day-panel__theme-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--bc-pink), var(--bc-purple));
+    color: var(--bc-white);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 50px;
+}
+ 
+/* Sessions */
+.bc-sessions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+}
+.bc-session {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: var(--bc-white);
+    border-radius: var(--bc-radius-sm);
+    padding: 1.2rem 1.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--bc-pink);
+    transition: box-shadow var(--bc-trans);
+}
+.bc-session:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.bc-session__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bc-pink);
+    flex-shrink: 0;
+    margin-top: 7px;
+}
+.bc-session__body h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--bc-dark);
+    margin-bottom: 0.3rem;
+}
+.bc-session__body p {
+    font-size: 0.92rem;
+    color: var(--bc-mid);
+    line-height: 1.6;
+}
+ 
+/* Deliverable badge */
+.bc-deliverable {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #f0fdf4;
+    border: 1.5px solid #86efac;
+    border-radius: 50px;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+}
+.bc-deliverable__label {
+    font-weight: 700;
+    color: #16a34a;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.07em;
+}
+.bc-deliverable__value {
+    color: var(--bc-dark);
+    font-weight: 600;
+}
+ 
+/* ============================================================
+   LOGISTICS
+   ============================================================ */
+.bc-logistics {
+    background: var(--bc-light);
+}
+.bc-logistics__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.bc-logistics-card {
+    background: var(--bc-white);
+    border-radius: var(--bc-radius);
+    padding: 1.8rem;
+    box-shadow: var(--bc-shadow);
+    border: 2px solid transparent;
+    transition: all var(--bc-trans);
+}
+.bc-logistics-card:hover {
+    border-color: var(--bc-pink-soft);
+    transform: translateY(-4px);
+}
+.bc-logistics-card__icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+.bc-logistics-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--bc-dark);
+    margin-bottom: 0.5rem;
+}
+.bc-logistics-card p {
+    font-size: 0.93rem;
+    color: var(--bc-mid);
+    line-height: 1.65;
+}
+ 
+/* ============================================================
+   FAQ
+   ============================================================ */
+.bc-faq {
+    background: var(--bc-white);
+}
+.bc-faq__list {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.bc-faq-item {
+    border: 1.5px solid var(--bc-border);
+    border-radius: var(--bc-radius-sm);
+    overflow: hidden;
+    transition: border-color var(--bc-trans);
+}
+.bc-faq-item:has(.bc-faq-item__question[aria-expanded="true"]) {
+    border-color: var(--bc-pink);
+}
+.bc-faq-item__question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.4rem;
+    background: var(--bc-white);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--bc-dark);
+    text-align: left;
+    transition: background var(--bc-trans);
+}
+.bc-faq-item__question:hover {
+    background: var(--bc-light);
+}
+.bc-faq-item__question[aria-expanded="true"] {
+    background: #fce7f3;
+    color: var(--bc-pink);
+}
+.bc-faq-item__arrow {
+    flex-shrink: 0;
+    display: inline-block;
+    font-size: 1.1rem;
+    transition: transform var(--bc-trans);
+}
+.bc-faq-item__question[aria-expanded="true"] .bc-faq-item__arrow {
+    transform: rotate(180deg);
+}
+.bc-faq-item__answer {
+    padding: 0 1.4rem 1.2rem;
+    background: var(--bc-light);
+}
+.bc-faq-item__answer[hidden] {
+    display: none;
+}
+.bc-faq-item__answer p {
+    font-size: 0.95rem;
+    color: var(--bc-mid);
+    line-height: 1.7;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--bc-border);
+}
+ 
+/* ============================================================
+   REGISTRATION CTA
+   ============================================================ */
+.bc-register {
+    position: relative;
+    background: linear-gradient(135deg, #1a082e 0%, #3b0764 50%, #1a082e 100%);
+    color: var(--bc-white);
+    overflow: hidden;
+    text-align: center;
+}
+.bc-register__bg { pointer-events: none; }
+.shape--4 { width: 400px; height: 400px; top: -120px; right: -100px; background: #ec4899; }
+.shape--5 { width: 280px; height: 280px; bottom: -80px; left: -60px; background: #7c3aed; }
+.bc-register__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.bc-register h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--bc-white);
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+}
+.bc-register p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: 2.2rem;
+    line-height: 1.6;
+    color: var(--bc-white);
+}
+.bc-register__note {
+    margin-top: 1.4rem;
+    font-size: 0.9rem !important;
+    opacity: 0.6 !important;
+}
+.bc-btn--primary.bc-register a,
+.bc-register .bc-btn--primary {
+    background: linear-gradient(135deg, var(--bc-pink) 0%, #a855f7 100%);
+}
+ 
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+    .bc-hero,
+    .bc-about,
+    .bc-challenge,
+    .bc-themes,
+    .bc-schedule,
+    .bc-logistics,
+    .bc-faq,
+    .bc-register { padding: 70px 0; }
+}
+ 
+@media (max-width: 600px) {
+    .bc-day-tab { min-width: 60px; padding: 10px 12px; }
+    .bc-day-tab__theme { display: none; }
+    .bc-day-panel { padding: 1.5rem; }
+    .bc-day-panel__header { flex-direction: column; align-items: flex-start; }
+    .bc-challenge__columns { gap: 2rem; }
+}
