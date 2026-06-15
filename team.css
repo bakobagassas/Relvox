@@ -1,0 +1,156 @@
+
+
+:root {
+    --bc-pink:      #ec4899;
+    --bc-pink-soft: #fbb6ce;
+    --bc-purple:    #7c3aed;
+    --bc-dark:      #1a202c;
+    --bc-mid:       #4a5568;
+    --bc-light:     #f7fafc;
+    --bc-white:     #ffffff;
+    --bc-border:    #e2e8f0;
+    --bc-radius:    16px;
+    --bc-shadow:    0 10px 30px rgba(0,0,0,0.08);
+    --bc-trans:     0.3s ease;
+}
+
+/* ── Nav logo: compact, matches existing header ── */
+.bc-nav-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ── Buttons (shared style with bootcamp page) ── */
+.bc-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all var(--bc-trans);
+    cursor: pointer;
+    border: none;
+}
+.bc-btn--primary {
+    background: linear-gradient(135deg, var(--bc-pink) 0%, var(--bc-purple) 100%);
+    color: var(--bc-white);
+    box-shadow: 0 8px 24px rgba(236,72,153,0.3);
+}
+.bc-btn--primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.45);
+}
+
+/* ── Decorative shapes ── */
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.12;
+}
+.shape--circle { background: var(--bc-pink); }
+.shape--1 { width: 460px; height: 460px; top: -160px; right: -160px; }
+.shape--2 { width: 300px; height: 300px; bottom: -100px; left: -100px; background: var(--bc-purple); }
+.shape--dot-grid {
+    width: 260px; height: 260px;
+    opacity: 1;
+    top: 12%; left: 4%;
+    background-image: radial-gradient(circle, rgba(236,72,153,0.12) 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+}
+
+/* ============================================================
+   COMING SOON SECTION
+   ============================================================ */
+.team-soon {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 40%, #fde8f1 100%);
+    overflow: hidden;
+    padding: 120px 0 80px;
+}
+
+.team-soon__bg { pointer-events: none; }
+
+.team-soon__inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.team-soon__eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bc-pink);
+    background: rgba(236,72,153,0.08);
+    border: 1px solid rgba(236,72,153,0.2);
+    border-radius: 50px;
+    padding: 6px 18px;
+    margin-bottom: 1.2rem;
+}
+
+.team-soon__title {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--bc-dark) 0%, #6b21a8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.team-soon__desc {
+    font-size: 1.1rem;
+    color: var(--bc-mid);
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+/* Placeholder avatar row */
+.team-soon__placeholders {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+.team-soon__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--bc-pink-soft) 0%, var(--bc-border) 100%);
+    border: 2px dashed rgba(124, 58, 237, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+.team-soon__avatar::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.6) 50%, transparent 70%);
+    background-size: 200% 100%;
+    animation: shimmer 2.4s ease-in-out infinite;
+}
+@keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 600px) {
+    .team-soon { padding: 100px 0 60px; }
+    .team-soon__avatar { width: 52px; height: 52px; }
+}
